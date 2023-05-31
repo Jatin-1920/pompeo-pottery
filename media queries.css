@@ -1,0 +1,187 @@
+
+@media(max-width:55em) {
+  .category{
+    flex-direction: column;
+  }
+  .cat-block{
+    margin-block: var(--xtra-margin);
+  }
+  .content{
+    flex-direction: column;
+    padding-inline: 1.75rem;
+  }
+  .content>div{
+    padding: 0;
+    margin-block: 1rem;
+  }
+.detail-cont{
+display: grid;
+}
+  .col{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10rem;
+  margin-inline: 1rem;
+  }
+  .card{
+    order: -1;
+    width: 350px;
+  }
+
+  .text-card{
+    padding: 0;
+  }
+  .contact-info{
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+  }
+  .contact-flex{
+    flex-direction: column;
+  }
+  .customer-box{
+    flex-direction: column;
+  }
+  .about-text-card{
+    margin-top: 2rem;
+  }
+  iframe{
+    height: 400px;
+    max-width: 400px
+  }
+  #width-p {
+    width: 100%;
+  }
+  #contact-width-p{
+    width: 70%;
+  }
+  #ready-width{
+    width: 100%;
+  }
+  .about-cont{
+    width: 100%;
+  }
+  .shop-container{
+    width: 90%;
+  }
+}
+  @media (min-width:42em) and (max-width:62em){
+  .primary-navigation{
+    padding-block: 1rem;
+    margin: 2rem 0 2rem 0;
+    /* padding-inline: clamp(3rem,10vw,10rem); */
+    padding-inline : 1rem;
+  }
+  .primary-navigation a{
+    padding-inline: .5rem;
+  }
+  .primary-navigation a>span{
+    display: none;
+  }
+  
+  .contact-flex{
+    flex-direction: column;
+  }
+  #name,.emailOne,#message{
+    width: 100%;
+  }
+ 
+}
+@media(max-width:42em) {
+  .primary-navigation {
+    position: fixed;
+  --gap: 2em;
+  text-align: center;
+  inset: 0 0 30% 0;
+    flex-direction: column;
+    padding: min(30vh,8rem) 2rem;
+    transition: transform 350ms ease-in-out;
+    z-index: 2;
+transform: translateY(-100%);
+  }
+  .primary-navigation li{
+    margin-block: 1rem;
+  }
+
+  .cart-display{
+    align-items: center;
+    inset:0 20% 0 0;
+    padding: 2rem 1rem; 
+  }
+
+ .menu{
+  margin-left: 2rem;
+ }
+
+  .menu{
+    display: block;
+    padding-right: 2rem;
+    color: black;
+  }
+
+  .remove{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 999;
+    font-size: 25px;
+    display: none;
+    color: black;
+  }
+  .cart-display{
+    display: flex;
+  }
+.li-cart{
+  display: none;
+}
+#email,#subscribe{
+  width: 100%;
+  margin-block: .25rem;
+}
+.pot-col{
+  width: 100%;
+}
+
+.card{
+  width: 320px;
+  height: 150px;
+
+}
+#name,.emailOne,#message{
+  width: 100%;
+}
+.logo{
+  font-size: 1rem;
+}
+
+}
+@media (max-width:80em) {
+  .container{
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+  }
+  .top-right{
+    margin-top:5rem;
+  }
+  .top-right img{
+  width: 100%;
+  }
+  .title{
+    font-size: 1.2rem;
+  }
+.heading{
+  font-size: 2.5rem;
+}
+
+.para,.btn{
+  font-size: 1rem;
+}
+
+.cart-col{
+  grid-template-columns: 1fr;
+}
+.extra-contact{
+  margin-inline: 3rem;
+}
+}
