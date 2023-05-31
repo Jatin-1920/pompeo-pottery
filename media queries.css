@@ -97,7 +97,7 @@ display: grid;
     padding: min(30vh,8rem) 2rem;
     transition: transform 350ms ease-in-out;
     z-index: 2;
-transform: translateY(-100%);
+transform: translateY(-200%);
   }
   .primary-navigation li{
     margin-block: 1rem;

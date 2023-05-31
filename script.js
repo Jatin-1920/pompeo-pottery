@@ -13,7 +13,7 @@ menu.on('click', function(){
 
 })
 removeBtn.on('click',function(){
-$('.primary-navigation').css({transform:'translateY(-100%)'})
+$('.primary-navigation').css({transform:'translateY(-200%)'})
 $(this).fadeOut(100)
 menu.fadeIn(600)
 })
