@@ -91,7 +91,7 @@
    }
  
    ::-webkit-scrollbar{
-     width: 15px;
+     width: 7px;
    }
    ::-webkit-scrollbar-track{
      background: linear-gradient(45deg,purple,#f80351,purple);
