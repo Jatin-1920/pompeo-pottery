@@ -100,15 +100,15 @@ function getLocale(){
 
 function deleteItems(id){
     console.log('Delete items')
-    cartItem= cartItem.filter((item)=>item.id !==id)
+    cartItem = cartItem.filter((item)=>item.id !==id)
     itemshop.dispatchEvent(new CustomEvent("itemsUpdated"));
 
 }
 
 
 function increment(id) {
-    let selectedItem  =id
-    let search =cartItem.find(x=>x.id===selectedItem)
+    let selectedItem =id
+    let search = cartItem.find(x=>x.id===selectedItem)
     if(search)
     {
         search.count +=1
@@ -141,7 +141,7 @@ function deleted(id) {
 const selectedItem = id
 const search = cartItem.find(x=>x.id===selectedItem)
 if(search.count === 0) {
-    essenceItem = cartItem.filter(item=>item.id!==id)
+    cartItem = cartItem.filter(item=>item.id!==id)
 }
 itemshop.dispatchEvent(new CustomEvent("itemsUpdated"));
         }
