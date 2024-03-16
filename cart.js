@@ -105,6 +105,47 @@ function deleteItems(id){
 
 }
 
+
+function increment(id) {
+    let selectedItem  =id
+    let search =cartItem.find(x=>x.id===selectedItem)
+    if(search)
+    {
+        search.count +=1
+    }
+    itemshop.dispatchEvent(new CustomEvent("itemsUpdated"));
+    calculation(id)
+    deleted(id)
+    }
+    function decrement(id) {
+        let selectedItem  =id
+    let search = cartItem.find(x=>x.id===selectedItem)
+    if(search.count===0) {
+      deleteItems(id)
+    }
+    else{
+        search.count -=1
+    }
+    itemshop.dispatchEvent(new CustomEvent("itemsUpdated"));
+    calculation(id)
+    deleted(id)
+    }
+    
+    function calculation(id) {
+        let search = cartItem.find(x=>x.id===id)
+        search.price = search.count*search.countPrice
+        itemshop.dispatchEvent(new CustomEvent("itemsUpdated"));
+    }
+
+function deleted(id) {
+const selectedItem = id
+const search = cartItem.find(x=>x.id===selectedItem)
+if(search.count === 0) {
+    essenceItem = cartItem.filter(item=>item.id!==id)
+}
+itemshop.dispatchEvent(new CustomEvent("itemsUpdated"));
+        }
+
 cartButton.forEach(item=>item.addEventListener("click",addToCart))
 itemshop.addEventListener("itemsUpdated",displayItem)
 itemshop.addEventListener("itemsUpdated",eventLocalStorage)
